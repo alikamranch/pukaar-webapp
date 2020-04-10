@@ -1,0 +1,31 @@
+.navbar.navbar-light .breadcrumb .nav-item .nav-link:hover,
+.navbar.navbar-light .navbar-nav .nav-item .nav-link:hover {
+  color: #4e969a;
+}
+
+.navbar.navbar-light .breadcrumb .nav-item.active > .nav-link,
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link {
+  background-color: white;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: #4e969a;
+}
+
+.navbar.navbar-light .breadcrumb .nav-item.active > .nav-link,
+.navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
+  color: white;
+}
+
+.navbar .nav-item .nav-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+  margin-right: 2rem;
+  font-size: medium;
+}
+
+.navbar-brand {
+  margin-right: 4rem;
+}

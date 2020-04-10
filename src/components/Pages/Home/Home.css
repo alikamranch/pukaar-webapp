@@ -1,0 +1,6 @@
+.background {
+  background-image: url("../../../assets/images/crousel.png");
+  background-size: cover;
+  background-position: center center;
+  min-height: 80vh;
+}
