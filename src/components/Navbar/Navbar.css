@@ -13,7 +13,7 @@
 
 .navbar.navbar-light .breadcrumb .nav-item.active > .nav-link,
 .navbar.navbar-light .navbar-nav .nav-item.active > .nav-link:hover {
-  color: white;
+  color: black;
 }
 
 .navbar .nav-item .nav-link {
@@ -28,4 +28,11 @@
 
 .navbar-brand {
   margin-right: 4rem;
+}
+
+.navbar-navlink-style {
+  background-color: white;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: #4e969a;
 }

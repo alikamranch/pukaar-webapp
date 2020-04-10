@@ -1,16 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import "./Add.css";
+import "./Stats.css";
 
-function Add() {
+function Stats() {
   return (
     <div>
       <Helmet>
-        <title>Add</title>
+        <title>Stats</title>
       </Helmet>
-      <h1>Add Page</h1>
+      <h1>Stats Page</h1>
     </div>
   );
 }
 
-export default Add;
+export default Stats;

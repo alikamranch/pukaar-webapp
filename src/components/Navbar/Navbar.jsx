@@ -4,11 +4,10 @@ import {
   MDBNavbarBrand,
   MDBNavbarNav,
   MDBNavItem,
-  MDBNavLink,
   MDBNavbarToggler,
   MDBCollapse,
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.png";
 import "./Navbar.css";
 
@@ -23,34 +22,63 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <Router>
-        <MDBNavbar color="white" light expand="md">
-          <MDBNavbarBrand>
-            <img
-              src={logo}
-              width="70"
-              height="70"
-              className="d-inline-block align-top"
-              alt="logo"
-            />
-          </MDBNavbarBrand>
-          <MDBNavbarToggler onClick={this.toggleCollapse} />
-          <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left>
-              <MDBNavItem active>
-                <MDBNavLink to="#!">Home</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Add</MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBNavLink to="#!">Stats</MDBNavLink>
-              </MDBNavItem>
-            </MDBNavbarNav>
-            <MDBNavbarNav right></MDBNavbarNav>
-          </MDBCollapse>
-        </MDBNavbar>
-      </Router>
+      <MDBNavbar color="white" light expand="md">
+        <MDBNavbarBrand>
+          <img
+            src={logo}
+            width="70"
+            height="70"
+            className="d-inline-block align-top"
+            alt="logo"
+          />
+        </MDBNavbarBrand>
+        <MDBNavbarToggler onClick={this.toggleCollapse} />
+        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+          <MDBNavbarNav left>
+            <MDBNavItem>
+              <NavLink
+                to="/"
+                exact
+                className="nav-link"
+                activeClassName="navbar-navlink-style"
+              >
+                Home
+              </NavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <NavLink
+                to="/add"
+                exact
+                className="nav-link"
+                activeClassName="navbar-navlink-style"
+              >
+                Add
+              </NavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <NavLink
+                to="/edit"
+                exact
+                className="nav-link"
+                activeClassName="navbar-navlink-style"
+              >
+                Edit
+              </NavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <NavLink
+                to="/stats"
+                exact
+                className="nav-link"
+                activeClassName="navbar-navlink-style"
+              >
+                Stats
+              </NavLink>
+            </MDBNavItem>
+          </MDBNavbarNav>
+          <MDBNavbarNav right></MDBNavbarNav>
+        </MDBCollapse>
+      </MDBNavbar>
     );
   }
 }
