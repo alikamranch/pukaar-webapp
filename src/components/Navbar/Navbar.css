@@ -18,16 +18,17 @@
 
 .navbar .nav-item .nav-link {
   padding-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
 }
 
 .navbar-expand-md .navbar-nav .nav-link {
-  margin-right: 2rem;
+  margin-right: 1rem;
   font-size: medium;
 }
 
 .navbar-brand {
-  margin-right: 4rem;
+  margin-right: 8rem;
+  margin-left: 3rem;
 }
 
 .navbar-navlink-style {

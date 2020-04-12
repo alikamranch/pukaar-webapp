@@ -31,9 +31,21 @@ class Home extends React.Component {
   }
 
   render() {
+    //to get served people
+    const stateData = this.state.people;
+    const data = [];
+    for (var person of stateData) {
+      if (person.status === "Served") {
+        data.push(person);
+      }
+    }
+
+    console.log(data);
+    //end
+
     const people = this.state.people;
     return (
-      <div>
+      <div className="mb-5">
         <div className="background img-fluid">
           <Helmet>
             <title>Home</title>
@@ -64,7 +76,19 @@ class Home extends React.Component {
                     <td>{person.id}</td>
                     <td>{person.name}</td>
                     <td>{person.contact}</td>
-                    <td>{person.status}</td>
+                    <td
+                      className={
+                        person.status === "Served"
+                          ? "served"
+                          : person.status === "In Queue"
+                          ? "queue"
+                          : person.status === "New"
+                          ? "new"
+                          : ""
+                      }
+                    >
+                      {person.status}
+                    </td>
                   </tr>
                 ))}
               </MDBTableBody>

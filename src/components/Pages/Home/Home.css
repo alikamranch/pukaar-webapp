@@ -2,5 +2,20 @@
   background-image: url("../../../assets/images/crousel.png");
   background-size: cover;
   background-position: center center;
-  min-height: 80vh;
+  min-height: 35vh;
+}
+
+.served {
+  color: green;
+  font-weight: bold;
+}
+
+.queue {
+  color: orange;
+  font-weight: bold;
+}
+
+.new {
+  color: red;
+  font-weight: bold;
 }
