@@ -31,18 +31,6 @@ class Home extends React.Component {
   }
 
   render() {
-    //to get served people
-    const stateData = this.state.people;
-    const data = [];
-    for (var person of stateData) {
-      if (person.status === "Served") {
-        data.push(person);
-      }
-    }
-
-    console.log(data);
-    //end
-
     const people = this.state.people;
     return (
       <div className="mb-5">
